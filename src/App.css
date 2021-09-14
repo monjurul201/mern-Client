@@ -1,38 +1,191 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* ==============Home Page start=============== */
+
+.top-container{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding: 50px 0;
+}
+
+
+.top-container::before{
+  content: "";
+  position: absolute;
+   top: 0%;
+   bottom: 0%;
+   left: 0;
+   right: 0;
+   z-index: -1;
+   background: linear-gradient(160deg,rgb(250, 247, 247) 50%,#fff 50%); 
+   background-size: 100% 100%;  
+}
+.title-content{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   text-align: center;
 }
+.title-content h1{
+  font-size: 1.9rem;
+  font-weight: 700;
+  word-spacing: 3px;
+  
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+.title{
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+.wellcome{
+  color: rgb(202, 116, 129);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width:443px) {
+  .title-content h1{
+    font-size: 1.2rem;
+    font-weight: 700;
+
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width:548px) {
+ 
+  .top-container::before{
+    content: "";
+    position: absolute;
+     top: 0%;
+     bottom: 0%;
+     left: 0;
+     right: 0;
+     z-index: -1;
+     background: linear-gradient(145deg,rgba(233, 233, 233)50%,rgb(246, 234, 234) 0%); 
+     background-size: 100% 100%;  
   }
 }
+
+/* ==================Home Page End=============== */
+
+
+/* ==================Navbar Start=============== */
+
+.navbar{
+  margin-bottom: 100px !important;
+}
+
+.item-active{
+  border-bottom: 3px solid #6C63FF;
+  color: #6C63FF !important;
+}
+.nav-item{
+  margin-left:15px !important ;
+  
+}
+/* ==================Navbar End=============== */
+
+
+/* ==================Signup start && Login Start============== */
+
+.login-container,.signup-container{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding: 50px 0; 
+   margin-top: 70px;
+}
+
+.login-content,.signup-content{
+  box-shadow: 0px 0px 15px 0px rgb(0, 0, 0.2);
+  width: 70%;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.signup-form{
+  padding: 25px;
+}
+.image img,.img-container img{
+height: 350px;
+padding: 15px;
+}
+.login-btn, .signup-btn{
+  border: none !important;
+  border-radius: 5px;
+ padding: 10px 35px;
+ background: #6C63FF;
+ color: #fff;
+ cursor: pointer;
+ letter-spacing: 2px;
+}
+.login-btn:hover, .signup-btn:hover{
+  transition: 0.5s;
+  background: #82DC83;
+}
+
+.signup-form input{
+  outline: none !important;
+  border: none !important;
+  border-bottom: 1px solid #000 !important;
+  box-shadow: none !important;
+
+}
+
+.signup-routing{
+  text-decoration: none;
+  color: #6C63FF;
+  font-size: 25px;
+  cursor: pointer;
+
+}
+
+input::-webkit-outer-spin-button,
+
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+
+  }
+
+  ::placeholder{
+    color: rgba(255, 255, 235,0.86),rgba(255, 255, 255,0.86) !important;
+    opacity: .5 !important;
+  }
+
+
+  /* ==================Signup start && Login End============== */
+
+  .about-container{
+    margin-top: 150px;
+    width: 100%;
+    position: relative;
+  }
+
+  .about-content{
+    position: absolute;
+    width: 50%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,3);
+  }
